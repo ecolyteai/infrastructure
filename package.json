@@ -1,6 +1,6 @@
 {
   "version": "1.0.109",
-  "name": "hono",
+  "name": "Ecolyte",
   "devDependencies": {
     "bun-types": "latest"
   },
