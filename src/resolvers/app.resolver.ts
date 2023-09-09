@@ -6,6 +6,11 @@ class appResolver {
   async getHello() {
     return 'Hello';
   }
+
+  @Query(() => String)
+  async createEmbedding() {
+    return "success"
+  }
 }
 
 export { appResolver };
