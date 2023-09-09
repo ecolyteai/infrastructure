@@ -1,19 +1,9 @@
-import { Hono } from "hono";
-import { serveStatic } from "hono/serve-static.bun";
+import "reflect-metadata";
+import { validatedEnv } from './constant';
+import { app } from './graphql';
 
-const port = parseInt(process.env.PORT) || 3000;
-
-const app = new Hono();
-
-app.use("/favicon.ico", serveStatic({ path: "./public/favicon.ico" }));
-
-app.get("/", (c) => {
-  return c.json({ message: "Hello World!" });
+app.listen(Number(validatedEnv.PORT), () => {
+  console.log(`Server is running on port ${validatedEnv.PORT}`);
 });
 
-console.log(`Running at http://localhost:${port}`);
-
-export default {
-  port,
-  fetch: app.fetch,
-};
+export default app;
