@@ -1,4 +1,8 @@
 
 export const sequenceMap = {
-    "Genome Strucutre": "file-1"
+    "file-1.txt": {
+        "name": "name",
+        "id": "fastaid",
+        "family": "sars"
+    }
 }
